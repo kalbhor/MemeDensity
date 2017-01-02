@@ -12,14 +12,14 @@ ASCII = """
 
 DESC = """
 - Tells you approximately how many memes are currently in your facebook
-newsfeed.
+newsfeed. Provides % memes in newsfeed.
 
-- Returns a Memes to Images ratio that lets you know how filled with memes your
-newsfeed is.
+- Provides memes in newsfeed urls
 """
 
 import os
 import argparse
+import requests
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
@@ -27,7 +27,22 @@ from getpass import getpass
 from argparse import RawTextHelpFormatter
 
 
+def _login_fb():
+
+	email = input('> Email or Phone: ')
+	password = getpass('> Password: ')
+
+	return email,password
+
+def _xkcd():
+
+	r = requests.get('http://xkcd.com/info.0.json').json()
+	return r['img']
+
 def _execute_script(email, password, count):
+
+
+    print("\nLoading..\nCheck out today's xkcd comic till then : %s \n\n" %(_xkcd()))
 
     driver = webdriver.Chrome()
     driver.get('https://www.facebook.com')
@@ -41,11 +56,10 @@ def _execute_script(email, password, count):
     pass_ID.send_keys(Keys.ENTER)
     sleep(5)
 
-    while(count):
-	    driver.execute_script("window.scrollBy(0, document.body.scrollHeight);")
-	    count -= 1
-	    sleep(2)
-
+    for i in range(0,count):
+        driver.execute_script("window.scrollBy(0, document.body.scrollHeight);")
+        sleep(1)
+	
     sleep(5)
 
     driver_tags = driver.execute_script('return document.getElementsByClassName("scaledImageFitWidth img")')
@@ -62,7 +76,7 @@ def _execute_script(email, password, count):
 
 def _check_memes(driver_img_list, verbose):
 
-	output = "\n{} memes in your newsfeed.\n{} total images in your newsfeed.\n{} Meme to Image ratio."
+	output = "\n{} memes in your newsfeed.\n{} total images in your newsfeed.\n{}% memes in newsfeed.\n"
 	alt_list = driver_img_list['alt']
 	count = 0
 
@@ -72,16 +86,12 @@ def _check_memes(driver_img_list, verbose):
 			if verbose:
 				print(driver_img_list['src'][key]) 
 
-	print(output.format(count,len(alt_list),count/len(alt_list)))
+	print(output.format(count,len(alt_list),round(count*100/len(alt_list),2)))
 
-def _login_fb():
-
-	email = input('> Email or Phone: ')
-	password = getpass('> Password: ')
-
-	return email,password
 
 def main():
+
+    print('\n')
 
     parser = argparse.ArgumentParser(
         description='\n{}\n{}\n'.format(ASCII,DESC), formatter_class=RawTextHelpFormatter)
@@ -114,5 +124,4 @@ def main():
 if __name__ == '__main__':
 
 	main()
-
 
