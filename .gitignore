@@ -95,3 +95,6 @@ ENV/
 # Trash
 .DS_Store
 
+#log
+ghostdriver.log
+
