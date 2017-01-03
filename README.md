@@ -1,7 +1,7 @@
 <img src="https://s29.postimg.org/7e007fahz/grin_face_meme_on_all_the_rage_faces_162044.png" height="550px" />
 <h2> M E M E &nbsp; D E N S I T Y </h2>
 #### Tells you the approximate amount of memes in your facebook newsfeed.
-
+![alt tag](workflow.gif)
 
 ## Preface
 Since April 2016, Facebook has been automatically adding alt tags to all images with keywords representing the content of the images:
