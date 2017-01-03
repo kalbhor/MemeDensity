@@ -51,7 +51,7 @@ $ pip install memedensity
 ```
 <br>
 
-If you'll be using a different webdriver (Not PhantomJS), simply edit MemeDensity.py and add your webdriver
+If you'll be using a different webdriver (Not PhantomJS), simply edit MemeDensity/command_line.py and add your webdriver
 ```py
 driver = webdriver.PhantomJS()
 ```
@@ -72,5 +72,6 @@ $ memedensity
 Currently this project is in its infancy and issues are bound to arise. If the script throws an exception, please make sure to check your running processes to see whether the webdriver has been closed or not. 
 To contribute, [post issues](https://github.com/lakshaykalbhor/MemeDensity/issues) without hesitation and [open pull requests](https://github.com/lakshaykalbhor/MemeDensity/pulls) to add/improve features.
 
-
+## License 
+#### [MIT](https://github.com/lakshaykalbhor/MemeDensity/blob/master/LICENSE)
 
