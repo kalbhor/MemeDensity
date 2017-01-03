@@ -44,7 +44,7 @@ def _execute_script(email, password, count):
 
     print("\nLoading..\nCheck out today's xkcd comic till then : %s \n\n" %(_xkcd()))
 
-    driver = webdriver.Chrome()
+    driver = webdriver.PhantomJS()
     driver.get('https://www.facebook.com')
 
     email_ID = driver.find_element_by_id('email')
