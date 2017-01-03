@@ -51,7 +51,7 @@ $ pip install memedensity
 ```
 <br>
 
-If you'll be using a different webdriver (Not PhantomJS), simply edit MemeDensity/command_line.py and add your webdriver
+If you'll be using a different webdriver (Not PhantomJS), simply edit [MemeDensity/command_line.py](https://github.com/lakshaykalbhor/MemeDensity/blob/master/MemeDensity/command_line.py) and add your webdriver
 ```py
 driver = webdriver.PhantomJS()
 ```
