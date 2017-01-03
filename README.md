@@ -1,4 +1,4 @@
-<img src="https://s29.postimg.org/7e007fahz/grin_face_meme_on_all_the_rage_faces_162044.png" height="500px" />
+<img src="https://s29.postimg.org/7e007fahz/grin_face_meme_on_all_the_rage_faces_162044.png" height="550px" />
 <h2> M E M E &nbsp; D E N S I T Y </h2>
 #### Tells you the approximate amount of memes in your facebook newsfeed.
 
@@ -70,7 +70,7 @@ $ memedensity
 ```
 ## Contributing
 Currently this project is in its infancy and issues are bound to arise. If the script throws an exception, please make sure to check your running processes to see whether the webdriver has been closed or not. 
-To contribute, [post issues](https://github.com/lakshaykalbhor/MemeDensity/issues) without hesitation and (open pull requests)[https://github.com/lakshaykalbhor/MemeDensity/pulls] to add/improve features.
+To contribute, [post issues](https://github.com/lakshaykalbhor/MemeDensity/issues) without hesitation and [open pull requests](https://github.com/lakshaykalbhor/MemeDensity/pulls) to add/improve features.
 
 
 
