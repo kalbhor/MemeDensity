@@ -20,12 +20,17 @@ newsfeed. Provides % memes in newsfeed.
 import os
 import argparse
 import requests
+import six
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from getpass import getpass
 from argparse import RawTextHelpFormatter
 
+if six.PY2:
+	input = raw_input
+else:
+	pass
 
 def _login_fb():
 
