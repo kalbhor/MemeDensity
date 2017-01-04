@@ -76,8 +76,12 @@ def _execute_script(email, password, count):
 
 def _check_memes(driver_img_list, verbose):
 
-	output = "\n{} memes in your newsfeed.\n{} total images in your newsfeed.\n{}% memes in newsfeed.\n"
 	alt_list = driver_img_list['alt']
+	if len(alt_list) == 0:
+		print("Error getting newsfeed. Possibly username or password was incorrect")
+		return
+
+	output = "\n{} memes in your newsfeed.\n{} total images in your newsfeed.\n{}% memes in newsfeed.\n"
 	count = 0
 
 	for key,alt in enumerate(alt_list):
