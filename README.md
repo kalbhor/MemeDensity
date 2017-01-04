@@ -39,6 +39,8 @@ sudo apt-get install phantomjs
 ## Installing
 
 #### From Source:
+Check out the latest [release](https://github.com/lakshaykalbhor/MemeDensity/releases)
+##### or
 ```sh
 $ git clone https://github.com/lakshaykalbhor/MemeDensity
 $ cd MemeDensity
