@@ -40,10 +40,10 @@ sudo apt-get install phantomjs
 ## Installing
 
 #### From Source:
-Check out the latest [release](https://github.com/lakshaykalbhor/MemeDensity/releases)
+Check out the latest [release](https://github.com/kalbhor/MemeDensity/releases)
 ##### or
 ```sh
-$ git clone https://github.com/lakshaykalbhor/MemeDensity
+$ git clone https://github.com/kalbhor/MemeDensity
 $ cd MemeDensity
 $ python setup.py install
 ```
@@ -54,7 +54,7 @@ $ pip install memedensity
 ```
 <br>
 
-If you'll be using a different webdriver (Not PhantomJS), simply edit [MemeDensity/command_line.py](https://github.com/lakshaykalbhor/MemeDensity/blob/master/MemeDensity/command_line.py) and add your webdriver
+If you'll be using a different webdriver (Not PhantomJS), simply edit [MemeDensity/command_line.py](https://github.com/kalbhor/MemeDensity/blob/master/MemeDensity/command_line.py) and add your webdriver
 ```py
 driver = webdriver.PhantomJS()
 ```
@@ -73,8 +73,8 @@ $ memedensity
 ```
 ## Contributing
 Currently this project is in its infancy and issues are bound to arise. If the script throws an exception, please make sure to check your running processes to see whether the webdriver has been closed or not. 
-To contribute, [post issues](https://github.com/lakshaykalbhor/MemeDensity/issues) without hesitation and [open pull requests](https://github.com/lakshaykalbhor/MemeDensity/pulls) to add/improve features.
+To contribute, [post issues](https://github.com/kalbhor/MemeDensity/issues) without hesitation and [open pull requests](https://github.com/kalbhor/MemeDensity/pulls) to add/improve features.
 
 ## License 
-#### [MIT](https://github.com/lakshaykalbhor/MemeDensity/blob/master/LICENSE)
+#### [MIT](https://github.com/kalbhor/MemeDensity/blob/master/LICENSE)
 
